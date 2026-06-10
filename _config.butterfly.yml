@@ -18,10 +18,11 @@ nav:
   fixed: false
 
 menu:
-  # Home: / || fas fa-home
-  # List||fas fa-list:
-  #   Music: /music/ || fas fa-music
-  #   Movie: /movies/ || fas fa-video
+  首页: / || fas fa-home
+  归档: /archives/ || fas fa-archive
+  标签: /tags/ || fas fa-tags
+  分类: /categories/ || fas fa-folder-open
+  关于: /about/ || fas fa-user
 
 # --------------------------------------
 # Code Blocks Settings
@@ -29,8 +30,8 @@ menu:
 
 code_blocks:
   # Code block theme: darker / pale night / light / ocean / false
-  theme: light
-  macStyle: false
+  theme: darker
+  macStyle: true
   # Code block height limit (unit: px)
   height_limit: false
   word_wrap: false
@@ -93,7 +94,7 @@ footer_img: false
 # Website Background
 # Can set it to color, image URL or an array containing colors and/or image URLs
 # If an array is provided, a random background will be selected from the array on each load
-background:
+background: "#0d0d0d"
 
 cover:
   # Disable the cover or not
@@ -149,7 +150,7 @@ index_top_img_height:
 
 # The subtitle on homepage
 subtitle:
-  enable: false
+  enable: true
   # Typewriter Effect
   effect: true
   # Customize typed.js
@@ -165,6 +166,10 @@ subtitle:
   source: false
   # If you close the typewriter effect, the subtitle will only show the first line of sub
   sub:
+    - "> ls ~/notes/"
+    - "> cat README.md"
+    - "移动端架构 | 金融数据安全 | AI 工程化"
+    - "> echo 'Welcome to my blog'"
 
 # Article layout on the homepage
 # 1: Cover on the left, info on the right
@@ -174,7 +179,7 @@ subtitle:
 # 5: Info displayed on the cover
 # 6: Masonry layout - Cover on top, info on the bottom
 # 7: Masonry layout - Info displayed on the cover
-index_layout: 3
+index_layout: 4
 
 # Display the article introduction on homepage
 # 1: description
@@ -264,7 +269,7 @@ footer:
   copyright:
     enable: true
     version: true
-  custom_text:
+  custom_text: <span style="color:#00ff88;">&gt;</span> Built with Hexo &amp; Butterfly
 
 # --------------------------------------
 # Aside Settings
@@ -292,7 +297,7 @@ aside:
       link: https://github.com/changer0
   card_announcement:
     enable: true
-    content: This is my Blog
+    content: <span style="color:#00ff88;">$</span> Welcome to my terminal...
   card_recent_post:
     enable: true
     # If set 0 will show all
@@ -756,23 +761,23 @@ site_verification:
 # Theme color for customize
 # Notice: color value must in double quotes like "#000" or may cause error!
 
-# theme_color:
-#   enable: true
-#   main: "#49B1F5"
-#   paginator: "#00c4b6"
-#   button_hover: "#FF7242"
-#   text_selection: "#00c4b6"
-#   link_color: "#99a9bf"
-#   meta_color: "#858585"
-#   hr_color: "#A4D8FA"
-#   code_foreground: "#F47466"
-#   code_background: "rgba(27, 31, 35, .05)"
-#   toc_color: "#00c4b6"
-#   blockquote_padding_color: "#49b1f5"
-#   blockquote_background_color: "#49b1f5"
-#   scrollbar_color: "#49b1f5"
-#   meta_theme_color_light: "ffffff"
-#   meta_theme_color_dark: "#0d0d0d"
+theme_color:
+  enable: true
+  main: "#00ff88"
+  paginator: "#00cc6a"
+  button_hover: "#00ff88"
+  text_selection: "#00ff88"
+  link_color: "#00ff88"
+  meta_color: "#858585"
+  hr_color: "#00ff88"
+  code_foreground: "#00ff88"
+  code_background: "rgba(0, 255, 136, .08)"
+  toc_color: "#00ff88"
+  blockquote_padding_color: "#00ff88"
+  blockquote_background_color: "#00ff88"
+  scrollbar_color: "#00ff88"
+  meta_theme_color_light: "#0d0d0d"
+  meta_theme_color_dark: "#0d0d0d"
 
 # The user interface setting of category and tag page
 # Choose: index - same as Homepage UI / default - same as archives UI
@@ -793,7 +798,7 @@ mask:
 
 # Loading Animation
 preloader:
-  enable: false
+  enable: true
   # source
   # 1. fullpage-loading
   # 2. pace (progress bar)
@@ -805,7 +810,7 @@ preloader:
 enter_transitions: true
 
 # Default display mode - light (default) / dark
-display_mode: light
+display_mode: dark
 
 # Configuration for beautifying the content of the article
 beautify:
@@ -868,15 +873,15 @@ canvas_fluttering_ribbon:
 # canvas_nest
 # https://github.com/hustcc/canvas-nest.js
 canvas_nest:
-  enable: false
+  enable: true
   # Color of lines, default: '0,0,0'; RGB values: (R,G,B).(note: use ',' to separate.)
-  color: '0,0,255'
+  color: '0,255,136'
   # The opacity of line (0~1)
-  opacity: 0.7
+  opacity: 0.3
   # The z-index property of the background
   zIndex: -1
   # The number of lines
-  count: 99
+  count: 50
   mobile: false
 
 # Mouse click effects: fireworks
@@ -1058,7 +1063,130 @@ css_prefix: true
 # Insert the code to head (before '</head>' tag) and the bottom (before '</body>' tag)
 inject:
   head:
-    # - <link rel="stylesheet" href="/xxx.css">
+    - |
+      <style>
+      /* =========================================
+         TERMINAL AESTHETIC - Ink Black + Neon Green
+         ========================================= */
+
+      /* Force exact background #0d0d0d */
+      [data-theme='dark'] {
+        --global-bg: #0d0d0d !important;
+        --card-bg: #0d0d0d !important;
+        --card-box-shadow: 0 2px 6px 0 rgba(0, 255, 136, .04) !important;
+        --card-hover-box-shadow: 0 4px 12px 0 rgba(0, 255, 136, .10) !important;
+        --sidebar-bg: #0d0d0d !important;
+        --sidebar-menu-bg: #111111 !important;
+      }
+
+      /* Nav bar: dark + subtle green border */
+      [data-theme='dark'] #page-header.nav-fixed > #nav,
+      [data-theme='dark'] #page-header.not-top-img > #nav {
+        background: rgba(13, 13, 13, .85) !important;
+        border-bottom: 1px solid rgba(0, 255, 136, .15);
+        box-shadow: none !important;
+      }
+
+      /* Homepage hero: black bg with green title */
+      [data-theme='dark'] #page-header.full_page {
+        background-color: #0d0d0d !important;
+      }
+      [data-theme='dark'] #site-title {
+        color: #00ff88 !important;
+        text-shadow: 0 0 20px rgba(0, 255, 136, .3) !important;
+        font-family: 'Courier New', Courier, monospace !important;
+        letter-spacing: 2px;
+      }
+      [data-theme='dark'] #site-subtitle {
+        color: rgba(0, 255, 136, .6) !important;
+        font-family: 'Courier New', Courier, monospace !important;
+      }
+
+      /* Typed.js cursor color */
+      .typed-cursor {
+        color: #00ff88 !important;
+      }
+
+      /* Post cards: terminal-like border */
+      [data-theme='dark'] .recent-post-item {
+        border: 1px solid rgba(0, 255, 136, .12) !important;
+        border-radius: 2px !important;
+        transition: border-color .3s ease, box-shadow .3s ease !important;
+      }
+      [data-theme='dark'] .recent-post-item:hover {
+        border-color: rgba(0, 255, 136, .35) !important;
+      }
+
+      /* Hide empty cover area for Layout 4 */
+      [data-theme='dark'] .recent-post-item .post_cover img.post-bg[src=""],
+      [data-theme='dark'] .recent-post-item .post_cover img.post-bg:not([src]) {
+        display: none;
+      }
+
+      /* Terminal-style scrollbar */
+      *::-webkit-scrollbar {
+        width: 4px !important;
+        height: 4px !important;
+      }
+      *::-webkit-scrollbar-track {
+        background: #0d0d0d !important;
+      }
+      *::-webkit-scrollbar-thumb {
+        background: #00ff88 !important;
+        border-radius: 2px;
+      }
+      *::-webkit-scrollbar-thumb:hover {
+        background: #00cc6a !important;
+      }
+
+      /* Text selection */
+      ::selection {
+        background: rgba(0, 255, 136, .3) !important;
+        color: #ffffff !important;
+      }
+
+      /* Blockquote: green left border glow */
+      [data-theme='dark'] blockquote {
+        border-left-color: #00ff88 !important;
+        background-color: rgba(0, 255, 136, .04) !important;
+      }
+
+      /* Footer subtle green */
+      [data-theme='dark'] #footer {
+        background: #0d0d0d !important;
+        border-top: 1px solid rgba(0, 255, 136, .1);
+      }
+
+      /* Scroll down arrow: green */
+      [data-theme='dark'] .scroll-down-effects {
+        color: #00ff88 !important;
+      }
+
+      /* Pagination: green active */
+      [data-theme='dark'] .pagination .page-number.current {
+        background: #00ff88 !important;
+        color: #0d0d0d !important;
+      }
+      [data-theme='dark'] .pagination .page-number:hover {
+        color: #00ff88 !important;
+      }
+
+      /* Aside card tweaks */
+      [data-theme='dark'] .aside-list > .aside-list-item {
+        border-bottom-color: rgba(0, 255, 136, .08) !important;
+      }
+
+      /* Tag cloud: green on hover */
+      [data-theme='dark'] .tag-cloud-list a:hover {
+        color: #00ff88 !important;
+      }
+
+      /* Search button */
+      [data-theme='dark'] #search-button:hover,
+      [data-theme='dark'] #search-button span:hover {
+        color: #00ff88 !important;
+      }
+      </style>
   bottom:
     # - <script src="xxxx"></script>
 
