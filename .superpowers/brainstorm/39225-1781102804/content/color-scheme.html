@@ -1,0 +1,60 @@
+<h2>首页配色方向</h2>
+<p class="subtitle">选择一个整体色彩基调，后续细节在此基础上调整</p>
+
+<div class="cards">
+  <div class="card" data-choice="midnight-blue" onclick="toggleSelect(this)">
+    <div class="card-image" style="background:linear-gradient(135deg,#0a1628 0%,#1a2744 40%,#2d4a7a 100%);height:160px;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden">
+      <div style="font-family:monospace;color:#5b9bd5;font-size:14px;opacity:0.3;position:absolute;top:10px;left:10px;line-height:1.6">fn main() {<br>&nbsp;&nbsp;println!("Hello");<br>}</div>
+      <div style="text-align:center">
+        <div style="color:#e8edf3;font-size:24px;font-weight:700;letter-spacing:2px">鹿鹿的技术笔记</div>
+        <div style="color:#5b9bd5;font-size:13px;margin-top:8px;letter-spacing:1px">移动端架构 · 金融安全 · AI工程化</div>
+      </div>
+    </div>
+    <div class="card-body">
+      <h3>A. 午夜深蓝</h3>
+      <p>深邃蓝黑底 + 冷蓝强调色，沉稳专业，JetBrains IDE 风格</p>
+      <div class="pros-cons">
+        <div class="pros"><h4>优点</h4><ul><li>经典技术感，阅读舒适</li><li>与代码高亮天然协调</li></ul></div>
+        <div class="cons"><h4>缺点</h4><ul><li>较为保守，辨识度一般</li></ul></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card" data-choice="ink-obsidian" onclick="toggleSelect(this)">
+    <div class="card-image" style="background:linear-gradient(135deg,#0d0d0d 0%,#1a1a2e 50%,#16213e 100%);height:160px;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden">
+      <div style="position:absolute;top:0;left:0;right:0;bottom:0;background:radial-gradient(ellipse at 70% 30%, rgba(0,255,136,0.06) 0%, transparent 60%)"></div>
+      <div style="font-family:monospace;color:#00ff88;font-size:14px;opacity:0.2;position:absolute;top:10px;left:10px;line-height:1.6">$ cargo build --release<br>Compiling v1.0.0</div>
+      <div style="text-align:center">
+        <div style="color:#e0e0e0;font-size:24px;font-weight:700;letter-spacing:2px">鹿鹿的技术笔记</div>
+        <div style="color:#00ff88;font-size:13px;margin-top:8px;letter-spacing:1px">移动端架构 · 金融安全 · AI工程化</div>
+      </div>
+    </div>
+    <div class="card-body">
+      <h3>B. 墨岩绿光</h3>
+      <p>纯黑底 + 荧光绿强调，终端/Vim 风格，硬核极客</p>
+      <div class="pros-cons">
+        <div class="pros"><h4>优点</h4><ul><li>辨识度极高，一眼记住</li><li>终端感最强</li></ul></div>
+        <div class="cons"><h4>缺点</h4><ul><li>绿色强调色面积大时阅读疲劳</li></ul></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card" data-choice="slate-cyan" onclick="toggleSelect(this)">
+    <div class="card-image" style="background:linear-gradient(135deg,#0f172a 0%,#1e293b 50%,#334155 100%);height:160px;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden">
+      <div style="position:absolute;top:0;left:0;right:0;bottom:0;background:radial-gradient(ellipse at 30% 70%, rgba(34,211,238,0.08) 0%, transparent 60%)"></div>
+      <div style="font-family:monospace;color:#22d3ee;font-size:14px;opacity:0.2;position:absolute;top:10px;left:10px;line-height:1.6">kubectl get pods -A<br>NAME&nbsp;&nbsp;STATUS&nbsp;&nbsp;RUNNING</div>
+      <div style="text-align:center">
+        <div style="color:#f1f5f9;font-size:24px;font-weight:700;letter-spacing:2px">鹿鹿的技术笔记</div>
+        <div style="color:#22d3ee;font-size:13px;margin-top:8px;letter-spacing:1px">移动端架构 · 金融安全 · AI工程化</div>
+      </div>
+    </div>
+    <div class="card-body">
+      <h3>C. 石板青</h3>
+      <p>深灰蓝底 + 青色强调，现代 DevOps/云原生风格</p>
+      <div class="pros-cons">
+        <div class="pros"><h4>优点</h4><ul><li>兼顾专业与清新</li><li>青色强调色对比度高但不刺眼</li></ul></div>
+        <div class="cons"><h4>缺点</h4><ul><li>比 B 温和一些，极客味稍弱</li></ul></div>
+      </div>
+    </div>
+  </div>
+</div>

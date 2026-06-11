@@ -1,0 +1,76 @@
+<h2>首页文章列表布局</h2>
+<p class="subtitle">深色背景下，信息叠加在封面上比左右分栏更有视觉冲击力</p>
+
+<div class="cards">
+  <div class="card" data-choice="layout5" onclick="toggleSelect(this)">
+    <div class="card-image" style="background:#0d0d0d;height:200px;display:flex;flex-direction:column;gap:8px;padding:16px;overflow:hidden">
+      <!-- mockup: layout 5 - info on cover -->
+      <div style="position:relative;border-radius:6px;overflow:hidden;height:80px;background:linear-gradient(135deg,#1a1a2e,#16213e)">
+        <div style="position:absolute;bottom:8px;left:10px;right:10px">
+          <div style="color:#00ff88;font-size:10px;opacity:0.7">2026-06-10</div>
+          <div style="color:#e0e0e0;font-size:13px;font-weight:600">Android 架构演进：从 MVC 到 MVI</div>
+        </div>
+      </div>
+      <div style="position:relative;border-radius:6px;overflow:hidden;height:80px;background:linear-gradient(135deg,#16213e,#1a1a2e)">
+        <div style="position:absolute;bottom:8px;left:10px;right:10px">
+          <div style="color:#00ff88;font-size:10px;opacity:0.7">2026-06-08</div>
+          <div style="color:#e0e0e0;font-size:13px;font-weight:600">金融数据安全：端到端加密实践</div>
+        </div>
+      </div>
+    </div>
+    <div class="card-body">
+      <h3>Layout 5 · 封面叠加信息</h3>
+      <p>文章信息直接显示在封面图上，深色半透明遮罩+绿光文字，沉浸感强</p>
+    </div>
+  </div>
+
+  <div class="card" data-choice="layout4" onclick="toggleSelect(this)">
+    <div class="card-image" style="background:#0d0d0d;height:200px;display:flex;flex-direction:column;gap:8px;padding:16px;overflow:hidden">
+      <!-- mockup: layout 4 - cover top, info bottom -->
+      <div style="border-radius:6px;overflow:hidden;background:#111">
+        <div style="height:50px;background:linear-gradient(135deg,#1a1a2e,#16213e);border-radius:6px 6px 0 0"></div>
+        <div style="padding:8px 10px">
+          <div style="color:#00ff88;font-size:10px;opacity:0.7">2026-06-10</div>
+          <div style="color:#e0e0e0;font-size:12px;font-weight:600">Android 架构演进：从 MVC 到 MVI</div>
+        </div>
+      </div>
+      <div style="border-radius:6px;overflow:hidden;background:#111">
+        <div style="height:50px;background:linear-gradient(135deg,#16213e,#1a1a2e);border-radius:6px 6px 0 0"></div>
+        <div style="padding:8px 10px">
+          <div style="color:#00ff88;font-size:10px;opacity:0.7">2026-06-08</div>
+          <div style="color:#e0e0e0;font-size:12px;font-weight:600">金融数据安全：端到端加密实践</div>
+        </div>
+      </div>
+    </div>
+    <div class="card-body">
+      <h3>Layout 4 · 封面上信息下</h3>
+      <p>封面图在上方，标题和日期在下方独立区域，信息层次清晰</p>
+    </div>
+  </div>
+
+  <div class="card" data-choice="layout6" onclick="toggleSelect(this)">
+    <div class="card-image" style="background:#0d0d0d;height:200px;padding:16px;overflow:hidden">
+      <!-- mockup: layout 6 - masonry -->
+      <div style="display:flex;gap:8px;align-items:flex-start">
+        <div style="flex:1;border-radius:6px;overflow:hidden;background:#111">
+          <div style="height:90px;background:linear-gradient(135deg,#1a1a2e,#16213e);border-radius:6px 6px 0 0"></div>
+          <div style="padding:8px 10px">
+            <div style="color:#00ff88;font-size:9px;opacity:0.7">2026-06-10</div>
+            <div style="color:#e0e0e0;font-size:11px;font-weight:600">Android 架构演进</div>
+          </div>
+        </div>
+        <div style="flex:1;border-radius:6px;overflow:hidden;background:#111">
+          <div style="height:60px;background:linear-gradient(135deg,#16213e,#1a1a2e);border-radius:6px 6px 0 0"></div>
+          <div style="padding:8px 10px">
+            <div style="color:#00ff88;font-size:9px;opacity:0.7">2026-06-08</div>
+            <div style="color:#e0e0e0;font-size:11px;font-weight:600">金融数据安全</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card-body">
+      <h3>Layout 6 · 瀑布流-封面上信息下</h3>
+      <p>瀑布流排列，错落有致，适合有封面图的内容，视觉丰富</p>
+    </div>
+  </div>
+</div>
