@@ -168,7 +168,7 @@ subtitle:
   sub:
     - "> ls ~/notes/"
     - "> cat README.md"
-    - "移动端架构 | 金融数据安全 | AI 工程化"
+    - "分享IT知识，一起努力，共同学习"
     - "> echo 'Welcome to my blog'"
 
 # Article layout on the homepage
