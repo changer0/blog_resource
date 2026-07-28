@@ -8,7 +8,7 @@ created: 2026-07-28
 description: Twenty-two thousand five hundred and eighty. That’s how many GPT-2 (2019) models fit inside KimiK3 (2026). We scaled up by a factor of 22,58...
 tags:
   - clippings
-date: 2026-07-28 20:23:30
+date: 2026-07-28 20:24:37
 ---
 
 ![图像](https://pbs.twimg.com/media/HOPJVdUb0AEabce?format=jpg&name=large)
